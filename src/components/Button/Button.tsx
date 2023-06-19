@@ -1,5 +1,6 @@
 import React from "react";
-import "./Button.css";
+import StyledButton from './Button.styles';
+
 
 interface ButtonProps {
   /**
@@ -27,18 +28,7 @@ interface ButtonProps {
 /**
   * Primary UI component for user interaction
 */
-const Button = ({
-  primary = false,
-  size = "medium",
-  label,
-  backgroundColor,
-  ...props
-}: ButtonProps) => {
-  return (
-    <button type="button" style={{ backgroundColor }} {...props}>
-      {label}
-    </button>
-  );
-};
+const Button = ({ label, ...rest }: ButtonProps) => <StyledButton {...rest}>{label}</StyledButton>;
+
 
 export default Button;
