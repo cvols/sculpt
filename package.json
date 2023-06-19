@@ -1,6 +1,6 @@
 {
   "name": "@valtech-sd/react-blocks",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "react component library",
   "scripts": {
     "rollup": "rollup -c",
@@ -46,6 +46,7 @@
     "react-dom": "^18.2.0",
     "rollup": "^3.25.1",
     "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
     "storybook": "^7.0.21",
     "styled-components": "^6.0.0-rc.3",
