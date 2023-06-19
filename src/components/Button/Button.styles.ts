@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import myStyled from '../../styled';
+import { css } from 'styled-components';
 
 const getVariantStyles = ({ primary = false, theme }) =>
   primary
@@ -35,10 +36,7 @@ const getSizeStyles = ({ size = 'medium', theme }) => {
   }
 };
 
-/**
- * Primary UI component for user interaction
- */
-const StyledButton = styled.button`
+const StyledButton = myStyled.button`
   font-family: ${({ theme }) => theme.typography.type.primary};
   font-weight: ${({ theme }) => theme.typography.weight.bold};
   border: 0;

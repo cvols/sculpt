@@ -21,7 +21,10 @@
 - `$ npm publish`
 
 ## ToDo
-- update version through CLI
-- make sure SSR is enabled for styled components
+- [ ] update version through CLI
+- [ ] make sure SSR is enabled for styled components
   - https://styled-components.com/docs/tooling#usage
+- [ ] write a create component template
+- [ ] figure out how to export themes properly without having to go into /dist
+- [ ] link storybook to another client for development
 

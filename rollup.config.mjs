@@ -24,7 +24,7 @@ export default [
       },
     ],
     plugins: [
-      peerDepsExternal(),
+      // peerDepsExternal(),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
@@ -33,9 +33,14 @@ export default [
     globals: { "styled-components": "styled" },
   },
   { // typed files
-    input: "dist/esm/index.d.ts", // entry point for the library for types
-    external: [/\.css$/], // telling rollup anything that is .css aren't part of type exports
+    input: "dist/esm/types/index.d.ts", // entry point for the library for types
     output: [{ file: "dist/index.d.ts", format: "es" }],
     plugins: [dts()],
+    external: [/\.(css|less|scss)$/], // telling rollup anything that is .css|less|scss aren't part of type exports
   },
+  {
+    input: "src/themes/index.ts",
+    output: [{ file: "dist/themes/index.js", format: "cjs" }],
+    plugins: [commonjs(), resolve(), typescript({ tsconfig: "./tsconfig.json" })]
+  }
 ];
