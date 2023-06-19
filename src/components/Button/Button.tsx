@@ -1,7 +1,6 @@
 import React from "react";
 import StyledButton from './Button.styles';
 
-
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -29,6 +28,5 @@ interface ButtonProps {
   * Primary UI component for user interaction
 */
 const Button = ({ label, ...rest }: ButtonProps) => <StyledButton {...rest}>{label}</StyledButton>;
-
 
 export default Button;
