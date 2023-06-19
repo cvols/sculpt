@@ -34,7 +34,7 @@ export default [
   },
   { // typed files
     input: "dist/esm/index.d.ts", // entry point for the library for types
-    external: [/\.css$/],
+    external: [/\.css$/], // telling rollup anything that is .css aren't part of type exports
     output: [{ file: "dist/index.d.ts", format: "es" }],
     plugins: [dts()],
   },
