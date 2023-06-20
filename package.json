@@ -1,7 +1,7 @@
 {
   "name": "@valtech-sd/react-blocks",
-  "version": "0.2.1",
-  "description": "react component library",
+  "version": "0.2.2",
+  "description": "Valtech-SD React Component Library",
   "scripts": {
     "rollup": "rollup -c",
     "test": "jest",

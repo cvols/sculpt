@@ -38,11 +38,27 @@
 
 `$ npm run test`
 
+## Team Rules
+
+<!-- - All commits must be made to a branch and then merged into master via a pull request -->
+<!-- - All pull requests must be reviewed by at least one other team member -->
+<!-- - All pull requests must pass the CI/CD pipeline before being merged into master -->
+- Must use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for commit messages
+- Must use [SemVer](https://semver.org) for version control
+- Must use [Gitmoji](https://gitmoji.dev) for commit messages
+- Must use NPM for package management
+- Do not use .css|.scss|.sass files. Use styled-components instead
+- Do not use .js|.jsx files. Use .ts|.tsx files instead
+- Test all components fully with Jest and React Testing Library
+- All components must be documented fully with Storybook
+- All components must be exported in index.tsx
+- All components should have a default Theme
+
 ## ToDo
 - [ ] update version through CLI
 - [ ] make sure SSR is enabled for styled components
   - https://styled-components.com/docs/tooling#usage
-- [ ] write a create component template
+- [x] write a create component template
 - [ ] figure out how to export themes properly without having to go into /dist
 - [ ] link storybook to another client for development
 - [ ] incorporate ci/cd for storybook
