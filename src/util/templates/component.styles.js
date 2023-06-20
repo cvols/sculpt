@@ -1,14 +1,14 @@
 module.exports = (componentName) => ({
-  content: `import { css } from 'styled-components';
+  content: `import { css } from "styled-components";
 
-import myStyled from '../../styled';
-import { Theme } from '../../theme/types';
+import ValtechStyles from "../../valtechStyles";
+import { Theme } from "../../theme/types";
 
-const Styled${componentName} = myStyled.div\`
+const Styled${componentName} = ValtechStyles.div\`
 // your styles go here
 \`;
 
 export default Styled${componentName};
 `,
-  extension: `.styles.ts`
+  extension: `.styles.ts`,
 });

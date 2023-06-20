@@ -1,11 +1,11 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { ThemeProvider } from "styled-components";
 
 import Button, { ButtonProps } from "./Button";
 import { lightTheme } from "../../themes";
 
-describe("Test Component", () => {
+describe("test component", () => {
   let props: ButtonProps;
 
   beforeEach(() => {
@@ -21,8 +21,5 @@ describe("Test Component", () => {
         <Button {...props} />
       </ThemeProvider>
     );
-
-    // const button = screen.getByRole('label', { name: /Button/i });
-    // expect(button).toBeVisible();
   });
 });

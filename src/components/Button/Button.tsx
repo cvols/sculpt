@@ -1,5 +1,5 @@
 import React from "react";
-import StyledButton from './Button.styles';
+import StyledButton from "./Button.styles";
 
 export interface ButtonProps {
   /**
@@ -25,8 +25,12 @@ export interface ButtonProps {
 }
 
 /**
-  * Primary UI component for user interaction
-*/
-const Button: React.FC<ButtonProps> = ({ label, ...rest }) => <StyledButton data-testid="Button" {...rest}>{label}</StyledButton>;
+ * Primary UI component for user interaction
+ */
+const Button: React.FC<ButtonProps> = ({ label, ...rest }) => (
+  <StyledButton data-testid="Button" {...rest}>
+    {label}
+  </StyledButton>
+);
 
 export default Button;

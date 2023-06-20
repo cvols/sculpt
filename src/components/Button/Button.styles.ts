@@ -1,6 +1,6 @@
 import { css } from "styled-components";
 
-import myStyled from "../../styled";
+import ValtechStyles from "../../valtechStyles";
 import { Theme } from "../../themes/types";
 
 type VariantProps = {
@@ -58,7 +58,7 @@ const getBackgroundColorStyles = ({ backgroundColor }: BackgroundColorProps) =>
     background-color: ${backgroundColor};
   `;
 
-const StyledButton = myStyled.button`
+const StyledButton = ValtechStyles.button`
   font-family: ${({ theme }) => theme.typography.type.primary};
   font-weight: ${({ theme }) => theme.typography.weight.bold};
   border: 0;

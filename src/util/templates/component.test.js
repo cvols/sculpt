@@ -1,29 +1,29 @@
 module.exports = (componentName) => ({
   content: `import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import { ThemeProvider } from "styled-components";
 
 import ${componentName}, { ${componentName}Props } from "./${componentName}";
+import { lightTheme } from "../../themes";
 
-describe("Test Component", () => {
+describe("test component", () => {
   let props: ${componentName}Props;
 
   beforeEach(() => {
     props = {
-      foo: "bar"
+      label: "${componentName}",
     };
   });
 
-  const renderComponent = () => render(<${componentName} {...props} />);
-
-  it("should render foo text correctly", () => {
-    props.foo = "chris was here";
-    const { getByTestId } = renderComponent();
-
-    const component = getByTestId("${componentName}");
-
-    expect(component).toHaveTextContent("chris was here");
+  it("should render correctly", () => {
+    props.label = "${componentName}";
+    render(
+      <ThemeProvider theme={ lightTheme }>
+        <${componentName} {...props} />
+      </ThemeProvider>
+    );
   });
 });
 `,
-  extension: `.test.tsx`
+  extension: `.test.tsx`,
 });
