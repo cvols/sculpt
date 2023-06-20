@@ -1,6 +1,6 @@
 {
   "name": "@valtech-sd/react-blocks",
-  "version": "0.1.11",
+  "version": "0.2.0",
   "description": "react component library",
   "scripts": {
     "rollup": "rollup -c",
@@ -8,7 +8,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_ed47c732d8ecd1c",
-    "clean": "rm -rf node_modules && rm -rf package-lock.json && npm i"
+    "clean": "rm -rf node_modules && rm -rf package-lock.json && npm i",
+    "generate": "node ./src/util/create-component"
   },
   "keywords": [],
   "author": {
