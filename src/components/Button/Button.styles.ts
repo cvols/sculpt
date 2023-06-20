@@ -1,7 +1,23 @@
-import myStyled from '../../styled';
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
-const getVariantStyles = ({ primary = false, theme }) =>
+import myStyled from "../../styled";
+import { Theme } from "../../themes/types";
+
+type VariantProps = {
+  primary?: boolean;
+  theme: Theme;
+};
+
+type SizeProps = {
+  size?: "small" | "medium" | "large";
+  theme: Theme;
+};
+
+type BackgroundColorProps = {
+  backgroundColor?: string;
+};
+
+const getVariantStyles = ({ primary = false, theme }: VariantProps) =>
   primary
     ? css`
         color: white;
@@ -13,15 +29,15 @@ const getVariantStyles = ({ primary = false, theme }) =>
         box-shadow: ${theme.colors.text} 0px 0px 0px 1px inset;
       `;
 
-const getSizeStyles = ({ size = 'medium', theme }) => {
+const getSizeStyles = ({ size = "medium", theme }: SizeProps) => {
   switch (size) {
-    case 'small': {
+    case "small": {
       return css`
         font-size: ${theme.typography.size.s1}px;
         padding: 10px 16px;
       `;
     }
-    case 'large': {
+    case "large": {
       return css`
         font-size: ${theme.typography.size.s3}px;
         padding: 12px 24px;
@@ -36,6 +52,12 @@ const getSizeStyles = ({ size = 'medium', theme }) => {
   }
 };
 
+const getBackgroundColorStyles = ({ backgroundColor }: BackgroundColorProps) =>
+  backgroundColor &&
+  css`
+    background-color: ${backgroundColor};
+  `;
+
 const StyledButton = myStyled.button`
   font-family: ${({ theme }) => theme.typography.type.primary};
   font-weight: ${({ theme }) => theme.typography.weight.bold};
@@ -45,13 +67,9 @@ const StyledButton = myStyled.button`
   display: inline-block;
   line-height: 1;
 
-  ${(props) => getVariantStyles(props)}
-  ${(props) => getSizeStyles(props)}
-  ${({ backgroundColor }) =>
-    backgroundColor &&
-    css`
-      background-color: ${backgroundColor};
-    `}
+  ${(props) => getVariantStyles(props as VariantProps)}
+  ${(props) => getSizeStyles(props as SizeProps)}
+  ${(props) => getBackgroundColorStyles(props as BackgroundColorProps)}
 `;
 
 export default StyledButton;

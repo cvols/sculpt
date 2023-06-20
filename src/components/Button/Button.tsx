@@ -1,7 +1,7 @@
 import React from "react";
 import StyledButton from './Button.styles';
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
