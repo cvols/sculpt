@@ -34,6 +34,10 @@
 
 `$ npm install @valtech-sd/react-blocks@latest`
 
+## Testing
+
+`$ npm run test`
+
 ## ToDo
 - [ ] update version through CLI
 - [ ] make sure SSR is enabled for styled components
