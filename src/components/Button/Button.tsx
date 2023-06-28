@@ -22,13 +22,17 @@ export interface ButtonProps {
    * Optional click handler
    */
   onClick?: () => void;
+  /**
+   * Type of the button
+   */
+  type?: "button" | "submit" | "reset";
 }
 
 /**
  * Primary UI component for user interaction
  */
-const Button: React.FC<ButtonProps> = ({ label, ...rest }) => (
-  <StyledButton data-testid="Button" {...rest}>
+const Button: React.FC<ButtonProps> = ({ type = "button", label, ...rest }) => (
+  <StyledButton data-testid="Button" type={type} {...rest}>
     {label}
   </StyledButton>
 );

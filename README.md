@@ -34,6 +34,28 @@
 
 `$ npm install @valtech-sd/react-blocks@latest`
 
+## Linking
+- Stack Overflow Url for linking:
+- https://stackoverflow.com/questions/76566405/how-do-i-create-a-symbolic-link-from-a-react-component-library-to-a-next-js-appl?noredirect=1#comment134997180_76566405
+
+- Linking is used for local development
+### Component Library
+
+`$ npm run rollup`
+`$ npm link`
+
+### Client/Host Application
+
+`$ npm link ../path/to/component/library`
+`$ rm -rf .next`
+`$ npm run dev`
+
+### Unlinking
+
+`$ rm -rf .next`
+`$ npm unlink --no-save ../path/to/component/library`
+`$ npm install`
+
 ## Testing
 
 `$ npm run test`
