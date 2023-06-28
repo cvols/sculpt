@@ -32,7 +32,7 @@
 
 ## Usage
 
-`$ npm install @valtech-sd/react-blocks@latest`
+`$ npm install @valtech-sd/react-blocks`
 
 ## Linking
 - Linking is used for local development
@@ -84,7 +84,7 @@
   - https://styled-components.com/docs/tooling#usage
 - [x] write a create component template
 - [ ] figure out how to export themes properly without having to go into /dist
-- [ ] link storybook to another client for development
+- [x] link storybook to another client for development
 - [ ] incorporate ci/cd for storybook
 - [ ] ship with a default theme
 
