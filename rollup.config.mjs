@@ -9,22 +9,22 @@ import packageJson from "./package.json" assert { type: "json" };
 
 export default [
   {
-    input: "src/index.ts", // entry point for the library
+    input: "src/index.ts",
     external: ["react-dom", "styled-components"],
     output: [
-      { // commonjs modules
+      {
         file: packageJson.main,
         format: "cjs",
         sourcemap: true,
       },
-      { // es6 modules
+      {
         file: packageJson.module,
         format: "esm",
         sourcemap: true,
       },
     ],
     plugins: [
-      // peerDepsExternal(),
+      peerDepsExternal(),
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
@@ -32,11 +32,11 @@ export default [
     ],
     globals: { "styled-components": "styled" },
   },
-  { // typed files
-    input: "dist/esm/types/index.d.ts", // entry point for the library for types
+  {
+    input: "dist/esm/types/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "es" }],
     plugins: [dts()],
-    external: [/\.(css|less|scss)$/], // telling rollup anything that is .css|less|scss aren't part of type exports
+    external: [/\.(css|less|scss)$/],
   },
   {
     input: "src/themes/index.ts",

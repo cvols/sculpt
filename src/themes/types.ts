@@ -18,7 +18,9 @@ export interface Theme {
     borderRadius: {
       small: number;
       default: number;
+      large: number;
     },
+    customSpacing: (px: number) => number;
   },
   typography: {
     type: {

@@ -17,8 +17,8 @@ type BackgroundColorProps = {
   backgroundColor?: string;
 };
 
-const getVariantStyles = ({ primary = false, theme }: VariantProps) =>
-  primary
+function getVariantStyles({ primary, theme }: VariantProps) {
+  return primary
     ? css`
         color: white;
         background-color: ${theme.colors.primary};
@@ -28,8 +28,9 @@ const getVariantStyles = ({ primary = false, theme }: VariantProps) =>
         background-color: transparent;
         box-shadow: ${theme.colors.text} 0px 0px 0px 1px inset;
       `;
+}
 
-const getSizeStyles = ({ size = "medium", theme }: SizeProps) => {
+function getSizeStyles({ size, theme }: SizeProps) {
   switch (size) {
     case "small": {
       return css`
@@ -50,13 +51,16 @@ const getSizeStyles = ({ size = "medium", theme }: SizeProps) => {
       `;
     }
   }
-};
+}
 
-const getBackgroundColorStyles = ({ backgroundColor }: BackgroundColorProps) =>
-  backgroundColor &&
-  css`
-    background-color: ${backgroundColor};
-  `;
+function getBackgroundColorStyles({ backgroundColor }: BackgroundColorProps) {
+  return (
+    backgroundColor &&
+    css`
+      background-color: ${backgroundColor};
+    `
+  );
+}
 
 const StyledButton = ValtechStyles.button`
   font-family: ${({ theme }) => theme.typography.type.primary};

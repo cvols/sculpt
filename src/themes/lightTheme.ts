@@ -12,13 +12,15 @@ const lightTheme = {
   spacing: {
     padding: {
       small: 10,
-      medium: 20,
-      large: 30,
+      medium: 15,
+      large: 20,
     },
     borderRadius: {
       small: 5,
       default: 10,
+      large: 15,
     },
+    customSpacing: (px: number) => px * 8,
   },
   typography: {
     type: {
