@@ -44,5 +44,10 @@ export interface Theme {
       l2: number;
       l3: number;
     },
+    lineHeight: {
+      default: number;
+      small: number;
+      large: number;
+    },
   },
 };

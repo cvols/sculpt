@@ -7,7 +7,7 @@ const lightTheme = {
     primary: '#6cfab5',
     secondary: '#1EA7FD',
     tertiary: '#DDDDDD',
-    text: '#222222',
+    text: '#444',
   },
   spacing: {
     padding: {
@@ -43,6 +43,11 @@ const lightTheme = {
       l1: 32,
       l2: 40,
       l3: 48,
+    },
+    lineHeight: {
+      default: 1.2,
+      small: 1.0,
+      large: 1.5,
     },
   },
 };
