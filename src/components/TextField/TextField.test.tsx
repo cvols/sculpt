@@ -11,11 +11,22 @@ describe("test component", () => {
   beforeEach(() => {
     props = {
       label: "TextField",
+      size: "large",
+      fullWidth: true,
     };
   });
 
   it("should render correctly", () => {
     props.label = "TextField";
+    render(
+      <ThemeProvider theme={ lightTheme }>
+        <TextField {...props} />
+      </ThemeProvider>
+    );
+  });
+  it("should render correctly", () => {
+    props.size = "small";
+    props.fullWidth = false;
     render(
       <ThemeProvider theme={ lightTheme }>
         <TextField {...props} />

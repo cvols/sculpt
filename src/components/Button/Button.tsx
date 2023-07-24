@@ -31,8 +31,8 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-const Button: React.FC<ButtonProps> = ({ type = "button", label, ...rest }) => (
-  <StyledButton data-testid="Button" type={type} {...rest}>
+const Button: React.FC<ButtonProps> = ({ type = "button", size = "medium", primary = false, label, ...rest }) => (
+  <StyledButton data-testid="Button" type={type} size={size} primary={primary} {...rest} >
     {label}
   </StyledButton>
 );

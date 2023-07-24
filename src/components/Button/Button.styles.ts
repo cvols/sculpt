@@ -17,6 +17,12 @@ type BackgroundColorProps = {
   backgroundColor?: string;
 };
 
+type StyledButtonProps = {
+  primary?: boolean;
+  size?: "small" | "medium" | "large";
+  backgroundColor?: string;
+};
+
 function getVariantStyles({ primary, theme }: VariantProps) {
   return primary
     ? css`
@@ -62,7 +68,7 @@ function getBackgroundColorStyles({ backgroundColor }: BackgroundColorProps) {
   );
 }
 
-const StyledButton = ValtechStyles.button`
+const StyledButton = ValtechStyles.button<StyledButtonProps>`
   font-family: ${({ theme }) => theme.typography.type.primary};
   font-weight: ${({ theme }) => theme.typography.weight.bold};
   border: 0;

@@ -14,7 +14,7 @@
 - [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - [Rollup](https://rollupjs.org)
 
-## Intallation
+## Installation
 
 - This project uses NPM. Please do not use any other package managers.
 
@@ -41,11 +41,6 @@
 - Stack Overflow Url for linking:
   - https://stackoverflow.com/questions/76566405/how-do-i-create-a-symbolic-link-from-a-react-component-library-to-a-next-js-appl?noredirect=1#comment134997180_76566405
 
-### Component Library
-
-- `$ npm run rollup`
-- `$ npm link`
-
 ### Client/Host Application
 
 - `$ npm link ../path/to/component/library`
@@ -58,9 +53,17 @@
 - `$ npm unlink --no-save ../path/to/component/library`
 - `$ npm install`
 
+### Component Library
+
+- `$ npm run rollup`
+- `$ npm link`
+
 ## Testing
 
 `$ npm run test`
+
+## Creating a new component
+`$ npm run generate <component-name>`
 
 ## Team Rules
 
