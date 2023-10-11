@@ -1,6 +1,5 @@
-# Valtech React Component Library
+# Sculpt Component Library
 
-- This is a private Github library that can only be used by the Valtech-SD Github Organization for projects that are using React.js and/or Next.js and styled-components
 - Template for building front end micro services
 - Equipped with [SemVer](https://semver.org) for version control
 
